@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.6;
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* HEADER */
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #93c5fd;
+}
+
+.location {
+  color: #9ca3af;
+  margin-bottom: 15px;
+}
+
+.links a {
+  margin: 0 12px;
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #93c5fd;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 5px;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+/* PROJECT CARDS */
+.project {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:nth-child(even) {
+  background: #273449; /* slightly different for alternating cards */
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.project a {
+  color: #60a5fa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.project a:hover {
+  color: #93c5fd;
+}
+
+.tech {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin-top: 50px;
+}
