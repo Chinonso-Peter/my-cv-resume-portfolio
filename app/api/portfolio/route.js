@@ -36,7 +36,7 @@ async function handleSave(request) {
       return NextResponse.json({ error: 'Invalid portfolio data payload' }, { status: 400 });
     }
 
-    const success = savePortfolioData(updatedData);
+    const success = await savePortfolioData(updatedData);
     if (!success) {
       return NextResponse.json({ error: 'Failed to save portfolio data' }, { status: 500 });
     }
