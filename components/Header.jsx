@@ -6,27 +6,27 @@ export default function Header({ profile }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#22223B]/90 backdrop-blur-md border-b border-[#4A4E69]">
-      <div className="h-16 max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#22223B]/95 backdrop-blur-md border-b border-[#4A4E69]">
+      <div className="h-16 max-w-7xl mx-auto px-4 sm:px-6 md:px-10 flex items-center justify-between">
         
         {/* Left: Logo & Brand */}
-        <a className="font-mono text-sm tracking-widest text-[#F2E9E4] hover:text-[#C9ADA7] transition-colors flex items-center gap-2.5 font-semibold" href="#about">
-          <div className="w-8 h-8 rounded bg-[#4A4E69]/40 border border-[#4A4E69] flex items-center justify-center text-[#F2E9E4] shadow-sm">
+        <a className="font-mono text-sm tracking-widest text-[#F2E9E4] hover:text-[#C9ADA7] transition-colors flex items-center gap-2 font-semibold" href="#about">
+          <div className="w-8 h-8 rounded bg-[#4A4E69]/40 border border-[#4A4E69] flex items-center justify-center text-[#F2E9E4] shadow-sm shrink-0">
             <svg className="w-4 h-4 text-[#C9ADA7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="4 17 10 11 4 5"></polyline>
               <line x1="12" y1="19" x2="20" y2="19"></line>
             </svg>
           </div>
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5 min-w-0">
             <span className="text-[#9A8C98]">//</span>
-            <span>{profile?.brand_name || 'EZEA.DEV'}</span>
+            <span className="truncate">{profile?.brand_name || 'EZEA.DEV'}</span>
             <span className="text-[10px] text-[#9A8C98] hidden sm:inline-block font-normal border-l border-[#4A4E69] pl-2 ml-1">
               {profile?.brand_sub || 'DEV.SEC'}
             </span>
           </div>
         </a>
 
-        {/* Center: Navigation Links */}
+        {/* Center: Navigation Links (Desktop) */}
         <nav className="hidden md:flex items-center gap-7 text-xs font-mono tracking-wider uppercase">
           <a className="text-[#C9ADA7] hover:text-[#F2E9E4] transition-colors" href="#about">About</a>
           <a className="text-[#C9ADA7] hover:text-[#F2E9E4] transition-colors" href="#skills">Skills</a>
@@ -37,9 +37,9 @@ export default function Header({ profile }) {
         </nav>
 
         {/* Right: Action Buttons */}
-        <div className="flex items-center gap-3">
-          {/* Download CV Dropdown */}
-          <div className="relative group">
+        <div className="flex items-center gap-2.5">
+          {/* Download CV Dropdown (Desktop) */}
+          <div className="relative group hidden sm:block">
             <button className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-[#4A4E69]/50 border border-[#4A4E69] hover:border-[#C9ADA7] hover:bg-[#4A4E69] text-xs font-mono uppercase tracking-wider text-[#F2E9E4] transition-colors" type="button">
               <span>Get CV</span>
               <svg className="w-3.5 h-3.5 text-[#9A8C98] group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
@@ -70,27 +70,78 @@ export default function Header({ profile }) {
 
           {/* Mobile Menu Toggle Button */}
           <button 
-            className="md:hidden p-1.5 rounded bg-[#4A4E69]/40 border border-[#4A4E69] text-[#F2E9E4] hover:text-[#C9ADA7] transition-colors" 
+            className="md:hidden p-2 rounded-lg bg-[#4A4E69]/40 border border-[#4A4E69] text-[#F2E9E4] hover:text-[#C9ADA7] active:bg-[#4A4E69]/70 transition-colors" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
-            aria-label="Toggle Navigation"
+            aria-label="Toggle Navigation Menu"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            {mobileMenuOpen ? (
+              <svg className="w-5 h-5 text-rose-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
 
       </div>
 
-      {/* Mobile Drawer Navigation */}
+      {/* Enhanced Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#22223B] border-b border-[#4A4E69] px-6 py-4 flex flex-col gap-3 font-mono text-xs uppercase tracking-wider">
-          <a className="text-[#C9ADA7] hover:text-[#F2E9E4] py-1 transition-colors" href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
-          <a className="text-[#C9ADA7] hover:text-[#F2E9E4] py-1 transition-colors" href="#skills" onClick={() => setMobileMenuOpen(false)}>Skills</a>
-          <a className="text-[#C9ADA7] hover:text-[#F2E9E4] py-1 transition-colors" href="#projects" onClick={() => setMobileMenuOpen(false)}>Projects</a>
-          <a className="text-[#C9ADA7] hover:text-[#F2E9E4] py-1 transition-colors" href="#certificates" onClick={() => setMobileMenuOpen(false)}>Certificates</a>
-          <a className="text-[#C9ADA7] hover:text-[#F2E9E4] py-1 transition-colors" href="#experience" onClick={() => setMobileMenuOpen(false)}>Experience</a>
-          <a className="text-[#C9ADA7] hover:text-[#F2E9E4] py-1 transition-colors" href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+        <div className="md:hidden bg-[#22223B]/98 backdrop-blur-xl border-b border-[#4A4E69] px-5 py-4 flex flex-col gap-3 font-mono text-xs uppercase tracking-wider shadow-2xl">
+          <nav className="flex flex-col gap-1">
+            <a className="text-[#C9ADA7] hover:text-[#F2E9E4] py-2 px-2 rounded hover:bg-[#4A4E69]/30 transition-colors flex items-center justify-between" href="#about" onClick={() => setMobileMenuOpen(false)}>
+              <span>// 01. About</span>
+              <span className="text-[10px] text-[#9A8C98]">BIO & PROFILE</span>
+            </a>
+            <a className="text-[#C9ADA7] hover:text-[#F2E9E4] py-2 px-2 rounded hover:bg-[#4A4E69]/30 transition-colors flex items-center justify-between" href="#skills" onClick={() => setMobileMenuOpen(false)}>
+              <span>// 02. Skills</span>
+              <span className="text-[10px] text-[#9A8C98]">TECH MATRIX</span>
+            </a>
+            <a className="text-[#C9ADA7] hover:text-[#F2E9E4] py-2 px-2 rounded hover:bg-[#4A4E69]/30 transition-colors flex items-center justify-between" href="#projects" onClick={() => setMobileMenuOpen(false)}>
+              <span>// 03. Projects</span>
+              <span className="text-[10px] text-[#9A8C98]">8 SYSTEMS</span>
+            </a>
+            <a className="text-[#C9ADA7] hover:text-[#F2E9E4] py-2 px-2 rounded hover:bg-[#4A4E69]/30 transition-colors flex items-center justify-between" href="#certificates" onClick={() => setMobileMenuOpen(false)}>
+              <span>// 04. Certificates</span>
+              <span className="text-[10px] text-[#9A8C98]">CREDENTIALS</span>
+            </a>
+            <a className="text-[#C9ADA7] hover:text-[#F2E9E4] py-2 px-2 rounded hover:bg-[#4A4E69]/30 transition-colors flex items-center justify-between" href="#experience" onClick={() => setMobileMenuOpen(false)}>
+              <span>// 05. Experience</span>
+              <span className="text-[10px] text-[#9A8C98]">BACKGROUND</span>
+            </a>
+            <a className="text-[#C9ADA7] hover:text-[#F2E9E4] py-2 px-2 rounded hover:bg-[#4A4E69]/30 transition-colors flex items-center justify-between" href="#contact" onClick={() => setMobileMenuOpen(false)}>
+              <span>// 06. Contact</span>
+              <span className="text-[10px] text-[#9A8C98]">TERMINAL</span>
+            </a>
+          </nav>
+
+          {/* Direct Mobile Resume Downloads */}
+          <div className="pt-3 border-t border-[#4A4E69] flex flex-col gap-2">
+            <span className="text-[10px] text-[#9A8C98] font-bold tracking-widest">// DOWNLOAD RESUMES:</span>
+            <div className="grid grid-cols-1 gap-2">
+              <a 
+                className="flex items-center justify-between px-3 py-2.5 rounded bg-[#4A4E69]/40 border border-[#4A4E69] text-[#F2E9E4] text-[11px] hover:border-[#C9ADA7]" 
+                href={profile?.cv?.dev || "/assets/cv/Ezea_Chinonso_Peter_Software_Game_Dev_CV.pdf"}
+                download="Ezea_Chinonso_Peter_Software_Game_Dev_CV.pdf"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>Software &amp; Game Dev CV</span>
+                <svg className="w-4 h-4 text-[#C9ADA7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+              </a>
+              <a 
+                className="flex items-center justify-between px-3 py-2.5 rounded bg-[#4A4E69]/40 border border-[#4A4E69] text-[#F2E9E4] text-[11px] hover:border-[#C9ADA7]" 
+                href={profile?.cv?.sec || "/assets/cv/Ezea_Chinonso_Peter_AppSec_Cybersecurity_CV.pdf"}
+                download="Ezea_Chinonso_Peter_AppSec_Cybersecurity_CV.pdf"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>AppSec &amp; Cybersecurity CV</span>
+                <svg className="w-4 h-4 text-[#C9ADA7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+              </a>
+            </div>
+          </div>
         </div>
       )}
     </header>

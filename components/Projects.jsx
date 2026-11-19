@@ -15,27 +15,27 @@ export default function Projects({ projects, researchLinks }) {
   });
 
   return (
-    <section className="w-full max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20 border-b border-[#4A4E69]/60" id="projects">
+    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-12 sm:py-16 md:py-20 border-b border-[#4A4E69]/60" id="projects">
       {/* Section Header with Category Tabs */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-        <div className="flex flex-col gap-2">
-          <span className="font-mono text-xs text-[#9A8C98] uppercase tracking-widest">// 03. SELECTED SYSTEMS</span>
-          <h2 className="font-headline text-2xl md:text-3xl font-bold text-[#F2E9E4]">Featured Projects</h2>
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 sm:mb-10">
+        <div className="flex flex-col gap-1.5">
+          <span className="font-mono text-[11px] sm:text-xs text-[#9A8C98] uppercase tracking-widest">// 03. SELECTED SYSTEMS</span>
+          <h2 className="font-headline text-2xl sm:text-3xl font-bold text-[#F2E9E4]">Featured Projects</h2>
         </div>
 
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap items-center gap-1.5 p-1 bg-[#22223B] rounded border border-[#4A4E69] self-start md:self-auto font-mono text-xs">
+        {/* Filter Tabs - Smooth Scrolling on Mobile */}
+        <div className="overflow-x-auto no-scrollbar max-w-full flex items-center gap-1.5 p-1 bg-[#22223B] rounded border border-[#4A4E69] self-start sm:self-auto font-mono text-xs">
           {[
-            { id: 'all', label: 'All' },
+            { id: 'all', label: 'All Projects' },
             { id: 'game', label: 'Game Dev' },
             { id: 'sec', label: 'Cybersecurity' },
             { id: 'soft', label: 'Software' },
           ].map((tab) => (
             <button
               key={tab.id}
-              className={`px-3 py-1 rounded transition-colors ${
+              className={`px-3 py-1.5 rounded transition-colors whitespace-nowrap text-xs ${
                 activeFilter === tab.id
-                  ? 'bg-[#4A4E69] border border-[#C9ADA7]/40 text-[#F2E9E4]'
+                  ? 'bg-[#4A4E69] border border-[#C9ADA7]/40 text-[#F2E9E4] font-medium'
                   : 'text-[#9A8C98] hover:text-[#F2E9E4]'
               }`}
               onClick={() => setActiveFilter(tab.id)}
@@ -48,11 +48,11 @@ export default function Projects({ projects, researchLinks }) {
       </div>
 
       {/* Balanced 2-Column Grid of Project Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
         {filteredProjects.map((proj) => (
           <div
             key={proj.id}
-            className="project-card bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-5 hover:border-[#C9ADA7]/40 transition-colors"
+            className="project-card bg-[#4A4E69]/20 rounded-lg p-5 sm:p-6 border border-[#4A4E69] flex flex-col justify-between gap-4 sm:gap-5 hover:border-[#C9ADA7]/40 transition-colors shadow-sm"
           >
             <div className="flex flex-col gap-4">
               {/* Header bar */}
@@ -327,7 +327,7 @@ export default function Projects({ projects, researchLinks }) {
       </div>
 
       {/* COMPACT SUB-BLOCK: Security Labs & CTF Research */}
-      <div className="mt-10 bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col lg:flex-row lg:items-center justify-between gap-6 hover:border-[#C9ADA7]/40 transition-colors">
+      <div className="mt-8 sm:mt-10 bg-[#4A4E69]/20 rounded-lg p-5 sm:p-6 border border-[#4A4E69] flex flex-col lg:flex-row lg:items-center justify-between gap-6 hover:border-[#C9ADA7]/40 transition-colors">
         {/* PortSwigger Labs */}
         <div className="flex flex-col gap-2.5 max-w-xl">
           <div className="flex items-center gap-2">
