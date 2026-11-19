@@ -26,8 +26,12 @@ export default function AdminPage() {
   const checkSession = async () => {
     try {
       const res = await fetch('/api/auth/session');
+      if (!res.ok) {
+        setIsAuthenticated(false);
+        return;
+      }
       const json = await res.json();
-      if (json.authenticated) {
+      if (json && json.authenticated) {
         setIsAuthenticated(true);
         loadPortfolio();
       } else {
@@ -43,6 +47,10 @@ export default function AdminPage() {
   const loadPortfolio = async () => {
     try {
       const res = await fetch('/api/portfolio');
+      if (!res.ok) {
+        console.error('Portfolio fetch returned non-200 status:', res.status);
+        return;
+      }
       const json = await res.json();
       setData(json);
     } catch (err) {
@@ -59,7 +67,12 @@ export default function AdminPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username: loginUser, password: loginPass }),
       });
-      const json = await res.json();
+      let json = {};
+      try {
+        json = await res.json();
+      } catch (e) {
+        json = { error: `Server error (${res.status})` };
+      }
       if (res.ok) {
         setIsAuthenticated(true);
         loadPortfolio();
