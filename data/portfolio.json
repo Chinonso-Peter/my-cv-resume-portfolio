@@ -1,0 +1,344 @@
+{
+  "profile": {
+    "brand_name": "m0n4rch",
+    "brand_sub": "HacknGame",
+    "name": "Ezea Chinonso Peter",
+    "eyebrow_role": "SOFTWARE & GAME DEVELOPER",
+    "eyebrow_sec": "CYBERSECURITY PRACTITIONER",
+    "headline": "I build resilient software and games and test web systems to make them harder to break.",
+    "bio": "I’m Ezea Chinonso Peter, a software developer, game creator, and cybersecurity practitioner based in Nigeria, holding a BSc. degree in Computer Science from the University of Nigeria, Nsukka (UNN). As co-founder at Cavern Studios, I engineer performant 2D/3D games in Unity (C#) and ship full-stack web applications. On the security side, I focus on web application pentesting, Bug Bounty hunting, OWASP Top 10 vulnerabilities, CTF challenge solving, and building tools to safeguard modern systems.",
+    "portrait": "assets/images/ProfilePic.jpg",
+    "status": "AVAILABLE FOR ROLES & CONTRACTS",
+    "year": "2026",
+    "email": "chinonsopeter456@gmail.com",
+    "location": "Lagos, Nigeria",
+    "social": {
+      "github": "https://github.com/Chinonso-Peter",
+      "linkedin": "https://www.linkedin.com/in/chinonso-peter-a02212299/",
+      "medium": "https://medium.com/@chinonsopeter456",
+      "x": "https://x.com/m0n4rch0_0",
+      "itch_vecna": "https://vecna-games.itch.io",
+      "itch_personal": "https://peters-g.itch.io"
+    },
+    "cv": {
+      "dev": "/assets/cv/Ezea_Chinonso_Peter_Software_Game_Dev_CV.pdf",
+      "sec": "/assets/cv/Ezea_Chinonso_Peter_AppSec_Cybersecurity_CV.pdf"
+    }
+  },
+  "skills": {
+    "cybersecurity": [
+      "OWASP Top 10",
+      "Web Pentesting Labs",
+      "Burp Suite",
+      "Credential Auditing",
+      "Networking Basics",
+      "Linux Security",
+      "Bug Bounty Research"
+    ],
+    "software": [
+      "Next.js",
+      "React",
+      "JavaScript / ES6+",
+      "Python",
+      "C#",
+      "REST APIs",
+      "HTML5 / CSS3"
+    ],
+    "game_dev": [
+      "Unity (2D & 3D)",
+      "C# Architecture",
+      "Mobile Optimization",
+      "ScriptableObjects",
+      "Addressables",
+      "UI Systems",
+      "Git & GitHub"
+    ]
+  },
+  "projects": [
+    {
+      "id": "PROJ_01",
+      "title": "Breached",
+      "category": "sec soft",
+      "badge": "Cybersecurity & Web App",
+      "badge_type": "sec",
+      "description": "Full-stack security application designed to check compromised credential databases for exposed logins and passwords. Engineered with clean API boundaries and end-to-end client-side privacy protection.",
+      "tags": [
+        "Next.js",
+        "React",
+        "REST APIs",
+        "Cybersecurity"
+      ],
+      "live_url": "https://breached-ten.vercel.app",
+      "live_label": "Live Application",
+      "github_url": "https://github.com/Chinonso-Peter",
+      "github_label": "GitHub",
+      "hud_type": "scanner",
+      "hud": {
+        "header_left": "TARGET: BREACH_IDENTITY_CHECK",
+        "header_right": "LIVE_SERVICE",
+        "line1_key": "HASH_VERIFY: SHA-1 k-Anonymity",
+        "line1_badge": "SECURE_QUERY",
+        "line2_key": "LEAK_DATABASE: RECORD_CHECK",
+        "line2_badge": "NO_LOGGING",
+        "footer_left": "ENDPOINT: /api/v1/lookup",
+        "footer_right": "STATUS: 200 OK"
+      }
+    },
+    {
+      "id": "PROJ_02",
+      "title": "Web Checker",
+      "category": "sec",
+      "badge": "Cybersecurity",
+      "badge_type": "sec",
+      "description": "Automated web vulnerability scanner that detects SQL Injection (SQLi), Cross-Site Scripting (XSS), and Broken Access Control flaws, generating structured PDF audit reports.",
+      "tags": [
+        "Python",
+        "AppSec",
+        "OWASP Top 10",
+        "PDF Reporting"
+      ],
+      "live_url": "",
+      "github_url": "https://github.com/Chinonso-Peter/web-checker",
+      "github_label": "Source Code",
+      "hud_type": "scanner_cwe",
+      "hud": {
+        "header_left": "TARGET: APPVULN_SCAN_LOCAL",
+        "header_right": "SCAN_COMPLETE",
+        "line1_key": "CWE-89: SQL Injection Param",
+        "line1_badge": "CRITICAL",
+        "line2_key": "CWE-639: IDOR Profile Endpoint",
+        "line2_badge": "HIGH",
+        "footer_left": "REPORT_OUTPUT: PDF_COMPILED",
+        "footer_right": "PASSED: 18 CHECKS"
+      }
+    },
+    {
+      "id": "PROJ_03",
+      "title": "BoardMind",
+      "category": "soft",
+      "badge": "Software & AI",
+      "badge_type": "soft",
+      "description": "Voice-first collaborative AI whiteboard for sketching and iterating on system architectures and backend components in real time.",
+      "tags": [
+        "Next.js",
+        "React",
+        "AI / Voice",
+        "Real-Time Sync"
+      ],
+      "live_url": "",
+      "github_url": "https://github.com/Chinonso-Peter/Board-Mind",
+      "github_label": "GitHub",
+      "hud_type": "canvas_nodes",
+      "hud": {
+        "header_left": "CANVAS: VOICE_MUTATION",
+        "header_right": "SYNC_60FPS",
+        "footer_left": "PROMPT: \"Add auth cluster\"",
+        "footer_right": "PEERS: 4"
+      }
+    },
+    {
+      "id": "PROJ_04",
+      "title": "Reef – Mobile Endless Runner",
+      "category": "game",
+      "badge": "Mobile Game Dev",
+      "badge_type": "game",
+      "description": "Fast-paced 3D mobile endless runner built at Cavern Studios / Vecna Games. Programmed tilt-controlled gameplay with custom power-up systems, high-efficiency asset rendering for lower-end Android hardware, and rewarded ad monetization.",
+      "tags": [
+        "Unity",
+        "C#",
+        "Mobile 3D",
+        "Optimization"
+      ],
+      "live_url": "https://vecna-games.itch.io/reef",
+      "live_label": "Play on itch.io",
+      "github_url": "https://vecna-games.itch.io",
+      "github_label": "Vecna Games Studio",
+      "hud_type": "telemetry_gamepad",
+      "hud": {
+        "header_left": "ENGINE: UNITY_3D_MOBILE",
+        "header_right": "TILT_INPUT: GYRO_ENABLED",
+        "stat_left_label": "PERFORMANCE",
+        "stat_left_val": "60 FPS",
+        "stat_right_label": "TARGET",
+        "stat_right_val": "LOW-END OPT",
+        "footer_left": "SYSTEM: REWARD_ADS & POWERUPS",
+        "footer_right": "RELEASED"
+      }
+    },
+    {
+      "id": "PROJ_05",
+      "title": "Flappy Ball",
+      "category": "game",
+      "badge": "2D Game Dev",
+      "badge_type": "game",
+      "description": "Fast-paced 2D basketball arcade game featuring custom-designed UI sprites, difficulty modes, responsive physics bounce collision, and achievement streak tracking.",
+      "tags": [
+        "Unity",
+        "C#",
+        "2D Physics",
+        "UI Art"
+      ],
+      "live_url": "",
+      "github_url": "https://github.com/Chinonso-Peter/Flappy_Ball",
+      "github_label": "GitHub",
+      "hud_type": "basketball_court",
+      "hud": {
+        "header_left": "ENGINE: UNITY_2D",
+        "header_right": "MODE: HARD",
+        "stat_left_label": "STREAK",
+        "stat_left_val": "14 HOOPS",
+        "stat_right_label": "COLLISION",
+        "stat_right_val": "60 FPS",
+        "footer_left": "ACHIEVEMENTS: 3/3 UNLOCKED",
+        "footer_right": "WEBGL_READY"
+      }
+    },
+    {
+      "id": "PROJ_06",
+      "title": "Dungeon-Dash – 3D RPG",
+      "category": "game",
+      "badge": "3D RPG Game Dev",
+      "badge_type": "game",
+      "description": "3D action RPG built around dungeon navigation and key quest progression. Implemented full character movement, obstacle state machines, interactable key-door puzzles, and cohesive level layouts.",
+      "tags": [
+        "Unity",
+        "C#",
+        "3D Mechanics",
+        "Quest System"
+      ],
+      "live_url": "https://peters-g.itch.io/dungeon-dashkey-quest",
+      "live_label": "Play on itch.io",
+      "github_url": "https://github.com/Chinonso-Peter",
+      "github_label": "GitHub",
+      "hud_type": "isometric_cad",
+      "hud": {
+        "header_left": "QUEST: KEY_QUEST_ENGINE",
+        "header_right": "STATE: EXPLORATION",
+        "svg_label": "KEYS: 3/3",
+        "footer_left": "PHYSICS: CHARACTER_CONTROLLER",
+        "footer_right": "DUNGEON // ACTIVE"
+      }
+    },
+    {
+      "id": "PROJ_07",
+      "title": "Jurassic Run – 2D Runner",
+      "category": "game",
+      "badge": "2D Arcade Game Dev",
+      "badge_type": "game",
+      "description": "Vibrant 2D endless runner engineered with smooth character controls, dynamic obstacle generation, custom collectible scoring systems, polished sprite animations, and audio effects.",
+      "tags": [
+        "Unity",
+        "C#",
+        "2D Physics",
+        "Game Feel & Audio"
+      ],
+      "live_url": "https://peters-g.itch.io/jurassic-run",
+      "live_label": "Play on itch.io",
+      "github_url": "https://github.com/Chinonso-Peter",
+      "github_label": "GitHub",
+      "hud_type": "telemetry_bolt",
+      "hud": {
+        "header_left": "ENGINE: UNITY_2D_PHYSICS",
+        "header_right": "LOOP: RUNNER_PROC",
+        "stat_left_label": "COLLECTIBLES",
+        "stat_left_val": "DYNAMIC",
+        "stat_right_label": "OBSTACLES",
+        "stat_right_val": "ADAPTIVE",
+        "footer_left": "AUDIO_FX: SYNCED",
+        "footer_right": "STANDALONE // WEB"
+      }
+    },
+    {
+      "id": "PROJ_08",
+      "title": "LocalInspect AI",
+      "category": "soft",
+      "badge": "Software & AI",
+      "badge_type": "soft",
+      "description": "Offline-first desktop application for analyzing architectural blueprints and generating interactive 3D structural models locally without cloud egress.",
+      "tags": [
+        "Local AI",
+        "Three.js",
+        "Desktop App",
+        "Python"
+      ],
+      "live_url": "",
+      "github_url": "https://github.com/Chinonso-Peter/local-inspect-ai",
+      "github_label": "GitHub",
+      "hud_type": "blueprint_3d",
+      "hud": {
+        "header_left": "INFERENCE: AIR_GAPPED_LOCAL",
+        "header_right": "THREE.JS_3D",
+        "svg_label": "TOL: 0.08",
+        "footer_left": "BLUEPRINT: STRUCTURAL_CAD",
+        "footer_right": "NO CLOUD EGRESS"
+      }
+    }
+  ],
+  "research_links": {
+    "medium": "https://medium.com/@chinonsopeter456",
+    "cyber_world": "https://github.com/Chinonso-Peter/Cyber_World"
+  },
+  "certificates": [
+    {
+      "name": "BSc. Computer Science",
+      "issuer": "University of Nigeria, Nsukka (UNN)",
+      "date": "Graduated",
+      "credential_id": "",
+      "file_url": "",
+      "badge_color": "cream"
+    },
+    {
+      "name": "GameUp Africa: Unity Game Development",
+      "issuer": "Endless Games and Learning Lab | Arizona State University",
+      "date": "2026",
+      "credential_id": "",
+      "file_url": "assets/certificates/CredID.pdf"
+    },
+    {
+      "name": "Ethical Hacker Course",
+      "issuer": "Cisco Networking Academy",
+      "date": "2025",
+      "credential_id": "",
+      "file_url": "assets/certificates/Ethical_Hacker_certificate_chinonsopeter456-gmail-com_5daead69-a6f6-44f6-92fe-4c6afc26666f.pdf"
+    },
+    {
+      "name": "Introduction to Cybersecurity",
+      "issuer": "Cisco Networking Academy",
+      "date": "2025",
+      "credential_id": "",
+      "file_url": "assets/certificates/Introduction_to_Cybersecurity_certificate_chinonsopeter456-gmail-com_f93ce141-6772-4754-afe5-42237def3247.pdf"
+    },
+    {
+      "name": "Fundamentals of Deep Learning",
+      "issuer": "NVIDIA",
+      "date": "2026",
+      "credential_id": "",
+      "file_url": "assets/certificates/My Learning _ NVIDIA.pdf"
+    },
+    {
+      "name": "THM Advent of Cyber",
+      "issuer": "TryHackMe",
+      "date": "2025",
+      "credential_id": "",
+      "file_url": "assets/certificates/THM-3TEHSAR5AC(AoC).pdf"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Co-Founder & Developer",
+      "company": "Cavern Studios • Nigeria",
+      "title": "Mobile Game Systems Engineering",
+      "description": "Spearheaded gameplay mechanics, architecture, and deployment for mobile titles. Handled 3D asset optimization, low-end device profiling, audio-visual feedback loops, and integration of monetization mechanisms.",
+      "role_tag": "ROLE // SYSTEMS & OPTIMIZATION",
+      "tech_tag": "UNITY / C#"
+    },
+    {
+      "role": "Independent Engineering & Security",
+      "company": "Self-Directed",
+      "title": "Web Security & Full-Stack Engineering",
+      "description": "Continuously developing scalable web tools using Next.js and React alongside comprehensive penetration testing practice. Pursuing mastery across web security vulnerabilities, bug bounty hunting, and defensive application architecture.",
+      "role_tag": "FOCUS // APPSEC & FULL-STACK",
+      "tech_tag": "CONTINUOUS TRAINING"
+    }
+  ]
+}

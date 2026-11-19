@@ -1,130 +1,1340 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark scroll-smooth" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ezea Chinonso Peter | Software & Game Developer</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Ezea Chinonso Peter // Software &amp; Game Dev • Cybersecurity Portfolio</title>
+  <meta name="description" content="Portfolio of Ezea Chinonso Peter - Software Developer, Unity Game Developer, and Cybersecurity Practitioner." />
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            theme: {
+              1: "#22223B", // Deep dark slate navy
+              2: "#4A4E69", // Muted slate blue-purple
+              3: "#9A8C98", // Muted mauve slate
+              4: "#C9ADA7", // Warm sand / rose-taupe
+              5: "#F2E9E4"  // Warm alabaster cream
+            },
+            obsidian: "#22223B",
+            carbon: "#2A2A44",
+            "carbon-light": "#373854",
+            hairline: "#4A4E69",
+            "hairline-light": "#5D6180",
+            amber: {
+              accent: "#C9ADA7",
+              muted: "rgba(201, 173, 167, 0.15)",
+              border: "rgba(201, 173, 167, 0.35)"
+            },
+            cyan: {
+              accent: "#F2E9E4",
+              muted: "rgba(242, 233, 228, 0.12)",
+              border: "rgba(242, 233, 228, 0.28)"
+            },
+            slate: {
+              muted: "#C9ADA7",
+              subtle: "#9A8C98"
+            }
+          },
+          fontFamily: {
+            headline: ["Space Grotesk", "sans-serif"],
+            body: ["Inter", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @layer base {
+      html, body {
+        background-color: #22223B;
+        color: #F2E9E4;
+      }
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #22223B;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4A4E69;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C9ADA7;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-[#22223B] text-[#F2E9E4] font-body antialiased selection:bg-[#C9ADA7] selection:text-[#22223B]">
 
-  <header class="hero">
-    <h1>EZEA CHINONSO PETER</h1>
-    <p class="subtitle">Software Developer • Game Developer • Cybersecurity Enthusiast</p>
-    <p class="location">Nigeria</p>
+  <!-- TOP NAVIGATION BAR -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#22223B]/90 backdrop-blur-md border-b border-[#4A4E69]">
+    <div class="h-16 max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
+      
+      <!-- Left: Logo & Brand -->
+      <a class="font-mono text-sm tracking-widest text-[#F2E9E4] hover:text-[#C9ADA7] transition-colors flex items-center gap-2.5 font-semibold" href="#about">
+        <div className="w-8 h-8 rounded bg-[#4A4E69]/40 border border-[#4A4E69] flex items-center justify-center text-[#F2E9E4] shadow-sm">
+          <svg class="w-4 h-4 text-[#C9ADA7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 17 10 11 4 5"></polyline>
+            <line x1="12" y1="19" x2="20" y2="19"></line>
+          </svg>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="text-[#9A8C98]">//</span>
+          <span>EZEA.DEV</span>
+          <span class="text-[10px] text-[#9A8C98] hidden sm:inline-block font-normal border-l border-[#4A4E69] pl-2 ml-1">DEV.SEC</span>
+        </div>
+      </a>
 
-    <div class="links">
-      <a href="mailto:chinonsopeter456@gmail.com">Email</a>
-      <a href="https://github.com/Chinonso-Peter" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/chinonso-peter-a02212299/" target="_blank">LinkedIn</a>
+      <!-- Center: Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-xs font-mono tracking-wider uppercase">
+        <a class="text-[#C9ADA7] hover:text-[#F2E9E4] transition-colors" href="#about">About</a>
+        <a class="text-[#C9ADA7] hover:text-[#F2E9E4] transition-colors" href="#skills">Skills</a>
+        <a class="text-[#C9ADA7] hover:text-[#F2E9E4] transition-colors" href="#projects">Projects</a>
+        <a class="text-[#C9ADA7] hover:text-[#F2E9E4] transition-colors" href="#certificates">Certificates</a>
+        <a class="text-[#C9ADA7] hover:text-[#F2E9E4] transition-colors" href="#experience">Experience</a>
+        <a class="text-[#C9ADA7] hover:text-[#F2E9E4] transition-colors" href="#contact">Contact</a>
+      </nav>
+
+      <!-- Right: Action Buttons -->
+      <div class="flex items-center gap-3">
+        <!-- Download CV Dropdown -->
+        <div class="relative group">
+          <button class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-[#4A4E69]/50 border border-[#4A4E69] hover:border-[#C9ADA7] hover:bg-[#4A4E69] text-xs font-mono uppercase tracking-wider text-[#F2E9E4] transition-colors" type="button">
+            <span>Get CV</span>
+            <svg class="w-3.5 h-3.5 text-[#9A8C98] group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full pt-2 hidden group-hover:block z-50">
+            <div class="w-60 bg-[#22223B] border border-[#4A4E69] rounded p-1.5 shadow-2xl backdrop-blur-lg">
+              <a 
+                class="flex items-center gap-2.5 px-3 py-2 rounded text-[#C9ADA7] hover:text-[#F2E9E4] hover:bg-[#4A4E69]/60 font-mono text-xs transition-colors" 
+                href="assets/cv/Ezea_Chinonso_Peter_Software_Game_Dev_CV.pdf"
+                download="Ezea_Chinonso_Peter_Software_Game_Dev_CV.pdf"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-[#F2E9E4]"></span>
+                <span>Software &amp; Game Dev CV</span>
+              </a>
+              <a 
+                class="flex items-center gap-2.5 px-3 py-2 rounded text-[#C9ADA7] hover:text-[#F2E9E4] hover:bg-[#4A4E69]/60 font-mono text-xs transition-colors" 
+                href="assets/cv/Ezea_Chinonso_Peter_AppSec_Cybersecurity_CV.pdf"
+                download="Ezea_Chinonso_Peter_AppSec_Cybersecurity_CV.pdf"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-[#C9ADA7]"></span>
+                <span>AppSec &amp; Cybersecurity CV</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-1.5 rounded bg-[#4A4E69]/40 border border-[#4A4E69] text-[#F2E9E4] hover:text-[#C9ADA7] transition-colors" onclick="toggleMobileMenu()" aria-label="Toggle Navigation">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#22223B] border-b border-[#4A4E69] px-6 py-4 flex flex-col gap-3 font-mono text-xs uppercase tracking-wider">
+      <a class="text-[#C9ADA7] hover:text-[#F2E9E4] py-1 transition-colors" href="#about" onclick="toggleMobileMenu()">About</a>
+      <a class="text-[#C9ADA7] hover:text-[#F2E9E4] py-1 transition-colors" href="#skills" onclick="toggleMobileMenu()">Skills</a>
+      <a class="text-[#C9ADA7] hover:text-[#F2E9E4] py-1 transition-colors" href="#projects" onclick="toggleMobileMenu()">Projects</a>
+      <a class="text-[#C9ADA7] hover:text-[#F2E9E4] py-1 transition-colors" href="#certificates" onclick="toggleMobileMenu()">Certificates</a>
+      <a class="text-[#C9ADA7] hover:text-[#F2E9E4] py-1 transition-colors" href="#experience" onclick="toggleMobileMenu()">Experience</a>
+      <a class="text-[#C9ADA7] hover:text-[#F2E9E4] py-1 transition-colors" href="#contact" onclick="toggleMobileMenu()">Contact</a>
     </div>
   </header>
 
-  <section>
-    <h2>Professional Summary</h2>
-    <p>
-      Software Developer with strong programming and problem-solving skills,
-      focused on building performant applications and games. Experienced with
-      Unity (C#), modern web technologies, and cybersecurity fundamentals.
-      Passionate about engineering-driven development, optimization, and
-      continuous learning.
-    </p>
-  </section>
+  <main class="w-full pt-16">
 
-  <section>
-    <h2>Technical Skills</h2>
+    <!-- SECTION 1: BIO / ABOUT ME (#about) -->
+    <section class="w-full max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24 border-b border-[#4A4E69]/60" id="about">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Column: 65% (lg:col-span-8) -->
+        <div class="lg:col-span-8 flex flex-col gap-6">
+          
+          <!-- Eyebrow Tag -->
+          <div class="inline-flex items-center gap-2 self-start font-mono text-xs tracking-wider bg-[#22223B] px-3.5 py-1 rounded border border-[#4A4E69]">
+            <span class="text-[#F2E9E4] font-semibold">SOFTWARE &amp; GAME DEVELOPER</span>
+            <span class="text-[#9A8C98]">•</span>
+            <span class="text-[#C9ADA7] font-semibold">CYBERSECURITY PRACTITIONER</span>
+          </div>
 
-    <ul>
-      <li><strong>Languages:</strong> C#, Python, JavaScript, HTML, CSS</li>
-      <li><strong>Game Development:</strong> Unity (2D & 3D), Mobile Optimization, ScriptableObjects, Addressables, UI Systems</li>
-      <li><strong>Web:</strong> Next.js, REST APIs</li>
-      <li><strong>Cybersecurity:</strong> OWASP Top 10, Pentesting Labs, Networking Basics</li>
-      <li><strong>Tools:</strong> Git, GitHub, VS Code</li>
-    </ul>
-  </section>
+          <!-- Headline -->
+          <h1 class="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-[44px] font-bold text-[#F2E9E4] tracking-tight leading-[1.15]">
+            I build resilient software and games and test web systems to make them harder to break.
+          </h1>
 
-  <section>
-    <h2>Projects</h2>
+          <!-- About Me Copy -->
+          <p class="font-body text-base md:text-lg text-[#C9ADA7] leading-relaxed max-w-2xl">
+            I’m <strong class="text-[#F2E9E4] font-semibold">Ezea Chinonso Peter</strong>, a software developer, game creator, and cybersecurity practitioner based in Nigeria, holding a BSc. degree in Computer Science from the University of Nigeria, Nsukka (UNN). As co-founder at Cavern Studios, I engineer performant 2D/3D games in Unity (C#) and ship full-stack web applications. On the security side, I focus on web application pentesting, Bug Bounty hunting, OWASP Top 10 vulnerabilities, CTF challenge solving, and building tools to safeguard modern systems.
+          </p>
 
-    <div class="project">
-      <h3>
-        Reef – Mobile Endless Runner Game
-        <a href="https://vecna-games.itch.io/reef" target="_blank">(View)</a>
-      </h3>
-      <ul>
-        <li>Built tilt-controlled gameplay with power-ups</li>
-        <li>Optimized 3D assets for low-end devices</li>
-        <li>Integrated ads and reward systems</li>
-      </ul>
-      <p class="tech">Tech: Unity, C#</p>
+          <!-- Quick Links Row -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#F2E9E4] text-[#22223B] font-mono text-xs font-semibold uppercase tracking-wider rounded hover:bg-[#C9ADA7] transition-colors" href="#projects">
+              <span>View Projects</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </a>
+
+            <!-- Social Icon Links -->
+            <div class="flex items-center gap-2 text-[#9A8C98] border-l border-[#4A4E69] pl-4">
+              <!-- GitHub -->
+              <a class="p-2 rounded hover:text-[#F2E9E4] hover:bg-[#4A4E69]/40 border border-transparent hover:border-[#4A4E69] transition-colors" href="https://github.com/Chinonso-Peter" rel="noopener noreferrer" target="_blank" title="GitHub: @Chinonso-Peter">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+              </a>
+              <!-- LinkedIn -->
+              <a class="p-2 rounded hover:text-[#C9ADA7] hover:bg-[#4A4E69]/40 border border-transparent hover:border-[#4A4E69] transition-colors" href="https://www.linkedin.com/in/chinonso-peter-a02212299/" rel="noopener noreferrer" target="_blank" title="LinkedIn: Chinonso Peter">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+              </a>
+              <!-- Medium -->
+              <a class="p-2 rounded hover:text-[#C9ADA7] hover:bg-[#4A4E69]/40 border border-transparent hover:border-[#4A4E69] transition-colors" href="https://medium.com/@chinonsopeter456" rel="noopener noreferrer" target="_blank" title="Medium: @chinonsopeter456">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"></path></svg>
+              </a>
+              <!-- X (Twitter) -->
+              <a class="p-2 rounded hover:text-[#F2E9E4] hover:bg-[#4A4E69]/40 border border-transparent hover:border-[#4A4E69] transition-colors" href="https://x.com/m0n4rch0_0" rel="noopener noreferrer" target="_blank" title="X: @m0n4rch0_0">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+              </a>
+              <!-- itch.io -->
+              <a class="p-2 rounded hover:text-[#F2E9E4] hover:bg-[#4A4E69]/40 border border-transparent hover:border-[#4A4E69] transition-colors" href="https://vecna-games.itch.io" rel="noopener noreferrer" target="_blank" title="itch.io: Cavern Studios">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M2.5 4.5A1.5 1.5 0 001 6v1.2a4.8 4.8 0 002.5 4.2V20a2 2 0 002 2h13a2 2 0 002-2v-8.6a4.8 4.8 0 002.5-4.2V6a1.5 1.5 0 00-1.5-1.5H2.5zm6.5 5.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm6 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM7 16h3v1H7v-1zm7 0h3v1h-3v-1z"></path></svg>
+              </a>
+              <!-- Email Direct -->
+              <a class="p-2 rounded hover:text-[#C9ADA7] hover:bg-[#4A4E69]/40 border border-transparent hover:border-[#4A4E69] transition-colors" href="mailto:chinonsopeter456@gmail.com" title="Email Direct">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: 35% (lg:col-span-4) - Portrait Photo Frame -->
+        <div class="lg:col-span-4 flex flex-col items-center">
+          <div class="relative w-full max-w-sm bg-[#4A4E69]/20 p-3 rounded-lg border border-[#4A4E69] shadow-2xl">
+            <!-- Architectural Corner Tick Marks -->
+            <div class="absolute -top-1 -left-1 w-2.5 h-2.5 border-t border-l border-[#F2E9E4] pointer-events-none"></div>
+            <div class="absolute -top-1 -right-1 w-2.5 h-2.5 border-t border-r border-[#F2E9E4] pointer-events-none"></div>
+            <div class="absolute -bottom-1 -left-1 w-2.5 h-2.5 border-b border-l border-[#C9ADA7] pointer-events-none"></div>
+            <div class="absolute -bottom-1 -right-1 w-2.5 h-2.5 border-b border-r border-[#C9ADA7] pointer-events-none"></div>
+
+            <!-- 4:5 Aspect Ratio Photo Container -->
+            <div class="aspect-[4/5] w-full overflow-hidden rounded bg-[#2A2A44] border border-[#4A4E69] relative">
+              <img 
+                alt="Ezea Chinonso Peter" 
+                class="w-full h-full object-cover rounded-md block" 
+                src="assets/images/ProfilePic.jpg"
+                onerror="this.onerror=null; this.src='assets/images/portrait.jpg';"
+                loading="eager"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#22223B]/80 via-transparent to-transparent pointer-events-none"></div>
+              
+              <!-- Monospaced Overlay Stamp -->
+              <span class="absolute bottom-2 left-2.5 font-mono text-[10px] text-[#F2E9E4] bg-[#22223B]/90 px-2 py-0.5 rounded border border-[#4A4E69] backdrop-blur-sm">
+                ID // CHINONSO_DEV_SEC
+              </span>
+            </div>
+
+            <!-- Compact Monospaced Status Strip -->
+            <div class="mt-3 pt-2.5 border-t border-[#4A4E69]/70 flex items-center justify-between px-1">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-[#C9ADA7] animate-pulse"></span>
+                <span class="font-mono text-[11px] tracking-wide text-[#F2E9E4]">AVAILABLE FOR ROLES &amp; CONTRACTS</span>
+              </div>
+              <span class="font-mono text-[10px] text-[#9A8C98]">2026</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: SKILLS (#skills) -->
+    <section class="w-full max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20 border-b border-[#4A4E69]/60" id="skills">
+      <!-- Section Header -->
+      <div class="flex flex-col gap-2 mb-10">
+        <span class="font-mono text-xs text-[#9A8C98] uppercase tracking-widest">// 02. CAPABILITIES</span>
+        <h2 class="font-headline text-2xl md:text-3xl font-bold text-[#F2E9E4]">Technical Skills Matrix</h2>
+      </div>
+
+      <!-- Clean 3-Column Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Column 1: Cybersecurity & Pentesting -->
+        <div class="bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between hover:border-[#C9ADA7]/40 transition-colors">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-[#4A4E69] mb-5">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-[#C9ADA7]"></span>
+                <span class="font-mono text-xs uppercase tracking-wider text-[#C9ADA7] font-semibold">Cybersecurity &amp; Pentesting</span>
+              </div>
+              <span class="font-mono text-[11px] text-[#9A8C98]">SEC_01</span>
+            </div>
+            <!-- Grouped Skill Pills -->
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">OWASP Top 10</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Web Pentesting Labs</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Burp Suite</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Credential Auditing</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Networking Basics</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Linux Security</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Bug Bounty Research</span>
+            </div>
+          </div>
+          <div class="pt-6 mt-6 border-t border-[#4A4E69]/60 flex items-center justify-between font-mono text-[11px] text-[#9A8C98]">
+            <span>OFFENSIVE AUDITING</span>
+            <span class="text-[#C9ADA7]">VAPT ACTIVE</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Software Development -->
+        <div class="bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between hover:border-[#C9ADA7]/40 transition-colors">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-[#4A4E69] mb-5">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-[#F2E9E4]"></span>
+                <span class="font-mono text-xs uppercase tracking-wider text-[#F2E9E4] font-semibold">Software &amp; Web Development</span>
+              </div>
+              <span class="font-mono text-[11px] text-[#9A8C98]">DEV_02</span>
+            </div>
+            <!-- Grouped Skill Pills -->
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Next.js</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">React</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">JavaScript / ES6+</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Python</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">C#</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">REST APIs</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">HTML5 / CSS3</span>
+            </div>
+          </div>
+          <div class="pt-6 mt-6 border-t border-[#4A4E69]/60 flex items-center justify-between font-mono text-[11px] text-[#9A8C98]">
+            <span>FULL-STACK &amp; WEB</span>
+            <span class="text-[#F2E9E4]">MODERN STACK</span>
+          </div>
+        </div>
+
+        <!-- Column 3: Game Dev & Tools -->
+        <div class="bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between hover:border-[#C9ADA7]/40 transition-colors">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-[#4A4E69] mb-5">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-[#C9ADA7]"></span>
+                <span class="font-mono text-xs uppercase tracking-wider text-[#C9ADA7] font-semibold">Game Dev &amp; Tools</span>
+              </div>
+              <span class="font-mono text-[11px] text-[#9A8C98]">GAM_03</span>
+            </div>
+            <!-- Grouped Skill Pills -->
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Unity (2D &amp; 3D)</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">C# Architecture</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Mobile Optimization</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">ScriptableObjects</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Addressables</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">UI Systems</span>
+              <span class="px-2.5 py-1 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Git &amp; GitHub</span>
+            </div>
+          </div>
+          <div class="pt-6 mt-6 border-t border-[#4A4E69]/60 flex items-center justify-between font-mono text-[11px] text-[#9A8C98]">
+            <span>ENGINEERING &amp; RUNTIME</span>
+            <span class="text-[#F2E9E4]">UNITY / C#</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: PROJECTS (#projects) -->
+    <section class="w-full max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20 border-b border-[#4A4E69]/60" id="projects">
+      <!-- Section Header with Category Tabs -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+        <div class="flex flex-col gap-2">
+          <span class="font-mono text-xs text-[#9A8C98] uppercase tracking-widest">// 03. SELECTED SYSTEMS</span>
+          <h2 class="font-headline text-2xl md:text-3xl font-bold text-[#F2E9E4]">Featured Projects</h2>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center gap-1.5 p-1 bg-[#22223B] rounded border border-[#4A4E69] self-start md:self-auto font-mono text-xs">
+          <button class="filter-btn active-tab px-3 py-1 rounded bg-[#4A4E69] border border-[#C9ADA7]/40 text-[#F2E9E4] transition-colors" onclick="filterProjects('all', this)" type="button">All</button>
+          <button class="filter-btn px-3 py-1 rounded text-[#9A8C98] hover:text-[#F2E9E4] transition-colors" onclick="filterProjects('game', this)" type="button">Game Dev</button>
+          <button class="filter-btn px-3 py-1 rounded text-[#9A8C98] hover:text-[#F2E9E4] transition-colors" onclick="filterProjects('sec', this)" type="button">Cybersecurity</button>
+          <button class="filter-btn px-3 py-1 rounded text-[#9A8C98] hover:text-[#F2E9E4] transition-colors" onclick="filterProjects('soft', this)" type="button">Software</button>
+        </div>
+      </div>
+
+      <!-- Balanced 2-Column Grid of Project Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- 1. Breached (Cybersecurity & Web App) -->
+        <div class="project-card bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-5 hover:border-[#C9ADA7]/40 transition-colors" data-category="sec soft">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs px-2.5 py-0.5 rounded bg-[#C9ADA7]/15 text-[#C9ADA7] border border-[#C9ADA7]/30 uppercase font-semibold">
+                Cybersecurity &amp; Web App
+              </span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">PROJ_01</span>
+            </div>
+
+            <!-- UI Preview: Scanner Terminal HUD -->
+            <div class="w-full h-32 rounded bg-[#22223B] border border-[#4A4E69] p-3 flex flex-col justify-between font-mono text-[11px]">
+              <div class="flex items-center justify-between text-[#9A8C98] border-b border-[#4A4E69]/60 pb-1.5">
+                <span>TARGET: BREACH_IDENTITY_CHECK</span>
+                <span class="text-[#C9ADA7] flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#C9ADA7] animate-pulse"></span>LIVE_SERVICE
+                </span>
+              </div>
+              <div class="flex flex-col gap-1 py-1 text-[10px]">
+                <div class="flex items-center justify-between text-[#F2E9E4]">
+                  <span>HASH_VERIFY: SHA-1 k-Anonymity</span>
+                  <span class="text-[#F2E9E4] bg-[#4A4E69] px-1.5 py-0.5 rounded border border-[#C9ADA7]/50">SECURE_QUERY</span>
+                </div>
+                <div class="flex items-center justify-between text-[#F2E9E4]">
+                  <span>LEAK_DATABASE: RECORD_CHECK</span>
+                  <span class="text-[#C9ADA7] bg-[#4A4E69]/70 px-1.5 py-0.5 rounded border border-[#4A4E69]">NO_LOGGING</span>
+                </div>
+              </div>
+              <div class="text-[#9A8C98] text-[10px] flex items-center justify-between pt-1 border-t border-[#4A4E69]/60">
+                <span>ENDPOINT: /api/v1/lookup</span>
+                <span class="text-[#C9ADA7]">STATUS: 200 OK</span>
+              </div>
+            </div>
+
+            <h3 class="font-headline text-xl font-bold text-[#F2E9E4]">Breached</h3>
+            <p class="font-body text-sm text-[#C9ADA7] leading-relaxed">
+              Full-stack security application designed to check compromised credential databases for exposed logins and passwords. Engineered with clean API boundaries and end-to-end client-side privacy protection.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Next.js</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">React</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">REST APIs</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Cybersecurity</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-5 pt-3 border-t border-[#4A4E69]/60 font-mono text-xs">
+            <a class="text-[#F2E9E4] hover:text-[#C9ADA7] flex items-center gap-1.5 transition-colors" href="https://breached-ten.vercel.app" rel="noopener noreferrer" target="_blank">
+              <span>Live Application</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+              </svg>
+            </a>
+            <a class="text-[#9A8C98] hover:text-[#F2E9E4] flex items-center gap-1.5 transition-colors" href="https://github.com/Chinonso-Peter" rel="noopener noreferrer" target="_blank">
+              <span>GitHub</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Web Checker (Cybersecurity) -->
+        <div class="project-card bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-5 hover:border-[#C9ADA7]/40 transition-colors" data-category="sec">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs px-2.5 py-0.5 rounded bg-[#C9ADA7]/15 text-[#C9ADA7] border border-[#C9ADA7]/30 uppercase font-semibold">
+                Cybersecurity
+              </span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">PROJ_02</span>
+            </div>
+
+            <!-- UI Preview: CWE Scanner HUD -->
+            <div class="w-full h-32 rounded bg-[#22223B] border border-[#4A4E69] p-3 flex flex-col justify-between font-mono text-[11px]">
+              <div class="flex items-center justify-between text-[#9A8C98] border-b border-[#4A4E69]/60 pb-1.5">
+                <span>TARGET: APPVULN_SCAN</span>
+                <span class="text-[#C9ADA7] flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#C9ADA7]"></span>SCAN_COMPLETE
+                </span>
+              </div>
+              <div class="flex flex-col gap-1 py-1 text-[10px]">
+                <div class="flex items-center justify-between text-[#F2E9E4]">
+                  <span>CWE-89: SQL Injection Param</span>
+                  <span class="text-[#F2E9E4] bg-[#4A4E69] px-1.5 py-0.5 rounded border border-[#C9ADA7]/50">CRITICAL</span>
+                </div>
+                <div class="flex items-center justify-between text-[#F2E9E4]">
+                  <span>CWE-639: IDOR Profile Endpoint</span>
+                  <span class="text-[#C9ADA7] bg-[#4A4E69]/70 px-1.5 py-0.5 rounded border border-[#4A4E69]">HIGH</span>
+                </div>
+              </div>
+              <div class="text-[#9A8C98] text-[10px] flex items-center justify-between pt-1 border-t border-[#4A4E69]/60">
+                <span>REPORT: PDF_COMPILED</span>
+                <span class="text-[#C9ADA7]">PASSED: 18 CHECKS</span>
+              </div>
+            </div>
+
+            <h3 class="font-headline text-xl font-bold text-[#F2E9E4]">Web Checker</h3>
+            <p class="font-body text-sm text-[#C9ADA7] leading-relaxed">
+              Automated web vulnerability scanner built in Python. Audits web applications for SQL Injection (SQLi), Cross-Site Scripting (XSS), and Broken Access Control flaws with structured PDF audit compilation.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Python</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">AppSec</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">OWASP Top 10</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">PDF Reporting</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-5 pt-3 border-t border-[#4A4E69]/60 font-mono text-xs">
+            <a class="text-[#F2E9E4] hover:text-[#C9ADA7] flex items-center gap-1.5 transition-colors" href="https://github.com/Chinonso-Peter/web-checker" rel="noopener noreferrer" target="_blank">
+              <span>Source Code on GitHub</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. BoardMind (Software & AI) -->
+        <div class="project-card bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-5 hover:border-[#C9ADA7]/40 transition-colors" data-category="soft">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs px-2.5 py-0.5 rounded bg-[#4A4E69]/60 text-[#F2E9E4] border border-[#4A4E69] uppercase font-semibold">
+                Software &amp; AI
+              </span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">PROJ_03</span>
+            </div>
+
+            <!-- UI Preview: Node Canvas SVG -->
+            <div class="w-full h-32 rounded bg-[#22223B] border border-[#4A4E69] p-3 flex flex-col justify-between font-mono text-[11px] relative overflow-hidden">
+              <div class="flex items-center justify-between text-[#9A8C98] border-b border-[#4A4E69]/60 pb-1.5">
+                <span>CANVAS: VOICE_MUTATION</span>
+                <span class="text-[#C9ADA7] flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#C9ADA7]"></span>SYNC_60FPS
+                </span>
+              </div>
+              <svg class="w-full h-14" fill="none" viewBox="0 0 260 50">
+                <line stroke="#C9ADA7" stroke-width="1.5" x1="30" x2="130" y1="25" y2="15"></line>
+                <line stroke="#9A8C98" stroke-dasharray="3 3" stroke-width="1.5" x1="130" x2="230" y1="15" y2="35"></line>
+                <circle cx="30" cy="25" fill="#22223B" r="9" stroke="#C9ADA7" stroke-width="1.5"></circle>
+                <text fill="#C9ADA7" font-family="JetBrains Mono" font-size="7" text-anchor="middle" x="30" y="28">VOX</text>
+                <circle cx="130" cy="15" fill="#22223B" r="11" stroke="#F2E9E4" stroke-width="1.5"></circle>
+                <text fill="#F2E9E4" font-family="JetBrains Mono" font-size="7" text-anchor="middle" x="130" y="18">LLM</text>
+                <circle cx="230" cy="35" fill="#22223B" r="12" stroke="#9A8C98" stroke-width="1.5"></circle>
+                <text fill="#C9ADA7" font-family="JetBrains Mono" font-size="7" text-anchor="middle" x="230" y="38">GHOST</text>
+              </svg>
+              <div class="text-[#9A8C98] text-[10px] flex items-center justify-between pt-1 border-t border-[#4A4E69]/60">
+                <span>PROMPT: "Add auth cluster"</span>
+                <span class="text-[#F2E9E4]">PEERS: 4</span>
+              </div>
+            </div>
+
+            <h3 class="font-headline text-xl font-bold text-[#F2E9E4]">BoardMind</h3>
+            <p class="font-body text-sm text-[#C9ADA7] leading-relaxed">
+              Voice-first collaborative AI whiteboard for sketching and iterating on system architectures and backend components in real time.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Next.js</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">React</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">AI / Voice</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Real-Time Sync</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-5 pt-3 border-t border-[#4A4E69]/60 font-mono text-xs">
+            <a class="text-[#F2E9E4] hover:text-[#C9ADA7] flex items-center gap-1.5 transition-colors" href="https://github.com/Chinonso-Peter/Board-Mind" rel="noopener noreferrer" target="_blank">
+              <span>Source on GitHub</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Reef (Game Dev) -->
+        <div class="project-card bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-5 hover:border-[#C9ADA7]/40 transition-colors" data-category="game">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs px-2.5 py-0.5 rounded bg-[#C9ADA7]/15 text-[#C9ADA7] border border-[#C9ADA7]/30 uppercase font-semibold">
+                Mobile Game Dev
+              </span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">PROJ_04</span>
+            </div>
+
+            <!-- UI Preview: Gamepad Telemetry -->
+            <div class="w-full h-32 rounded bg-[#22223B] border border-[#4A4E69] p-3 flex flex-col justify-between font-mono text-[11px]">
+              <div class="flex items-center justify-between text-[#9A8C98] border-b border-[#4A4E69]/60 pb-1.5">
+                <span>ENGINE: UNITY_3D_MOBILE</span>
+                <span class="text-[#C9ADA7]">TILT_INPUT: GYRO_ENABLED</span>
+              </div>
+              <div class="flex items-center justify-around py-1">
+                <div class="text-center">
+                  <span class="text-[9px] text-[#9A8C98] block">PERFORMANCE</span>
+                  <span class="font-headline text-base font-bold text-[#F2E9E4]">60 FPS</span>
+                </div>
+                <div class="w-9 h-9 rounded-full border border-dashed border-[#C9ADA7] flex items-center justify-center">
+                  <svg class="w-4 h-4 text-[#C9ADA7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 6H9a6 6 0 00-6 6v3a3 3 0 003 3h1.5a1.5 1.5 0 001.5-1.5V15h2v1.5a1.5 1.5 0 001.5 1.5H18a3 3 0 003-3v-3a6 6 0 00-6-6zM6 12h4m-2-2v4m9-1h.01m2-2h.01" />
+                  </svg>
+                </div>
+                <div class="text-center">
+                  <span class="text-[9px] text-[#9A8C98] block">TARGET</span>
+                  <span class="font-mono text-xs text-[#F2E9E4]">LOW-END OPT</span>
+                </div>
+              </div>
+              <div class="text-[#9A8C98] text-[10px] flex items-center justify-between pt-1 border-t border-[#4A4E69]/60">
+                <span>SYSTEM: REWARD_ADS &amp; POWERUPS</span>
+                <span class="text-[#C9ADA7]">RELEASED</span>
+              </div>
+            </div>
+
+            <h3 class="font-headline text-xl font-bold text-[#F2E9E4]">Reef – Mobile Endless Runner</h3>
+            <p class="font-body text-sm text-[#C9ADA7] leading-relaxed">
+              Fast-paced 3D mobile endless runner built at Cavern Studios. Programmed tilt-controlled gameplay with custom power-up systems, high-efficiency asset rendering for lower-end Android hardware, and rewarded ad monetization.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Unity</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">C#</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Mobile 3D</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Optimization</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-5 pt-3 border-t border-[#4A4E69]/60 font-mono text-xs">
+            <a class="text-[#F2E9E4] hover:text-[#C9ADA7] flex items-center gap-1.5 transition-colors" href="https://vecna-games.itch.io/reef" rel="noopener noreferrer" target="_blank">
+              <span>Play on itch.io</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+              </svg>
+            </a>
+            <a class="text-[#9A8C98] hover:text-[#F2E9E4] flex items-center gap-1.5 transition-colors" href="https://vecna-games.itch.io" rel="noopener noreferrer" target="_blank">
+              <span>Cavern Studios</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. Flappy Ball (Game Dev) -->
+        <div class="project-card bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-5 hover:border-[#C9ADA7]/40 transition-colors" data-category="game">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs px-2.5 py-0.5 rounded bg-[#C9ADA7]/15 text-[#C9ADA7] border border-[#C9ADA7]/30 uppercase font-semibold">
+                2D Game Dev
+              </span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">PROJ_05</span>
+            </div>
+
+            <!-- UI Preview: Basketball Court HUD -->
+            <div class="w-full h-32 rounded bg-[#22223B] border border-[#4A4E69] p-3 flex flex-col justify-between font-mono text-[11px]">
+              <div class="flex items-center justify-between text-[#9A8C98] border-b border-[#4A4E69]/60 pb-1.5">
+                <span>ENGINE: UNITY_2D</span>
+                <span class="text-[#C9ADA7]">MODE: HARD</span>
+              </div>
+              <div class="flex items-center justify-around py-1">
+                <div class="text-center">
+                  <span class="text-[9px] text-[#9A8C98] block">STREAK</span>
+                  <span class="font-headline text-base font-bold text-[#F2E9E4]">14 HOOPS</span>
+                </div>
+                <div class="w-9 h-9 rounded-full border border-dashed border-[#C9ADA7] flex items-center justify-center">
+                  <svg class="w-4 h-4 text-[#C9ADA7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10m0-20a15.3 15.3 0 00-4 10 15.3 15.3 0 004 10M2 12h20" />
+                  </svg>
+                </div>
+                <div class="text-center">
+                  <span class="text-[9px] text-[#9A8C98] block">COLLISION</span>
+                  <span class="font-mono text-xs text-[#F2E9E4]">60 FPS</span>
+                </div>
+              </div>
+              <div class="text-[#9A8C98] text-[10px] flex items-center justify-between pt-1 border-t border-[#4A4E69]/60">
+                <span>ACHIEVEMENTS: 3/3 UNLOCKED</span>
+                <span class="text-[#C9ADA7]">WEBGL_READY</span>
+              </div>
+            </div>
+
+            <h3 class="font-headline text-xl font-bold text-[#F2E9E4]">Flappy Ball</h3>
+            <p class="font-body text-sm text-[#C9ADA7] leading-relaxed">
+              Fast-paced 2D basketball arcade game featuring custom-designed UI sprites, difficulty modes, responsive physics bounce collision, and achievement streak tracking.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Unity</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">C#</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">2D Physics</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">UI Art</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-5 pt-3 border-t border-[#4A4E69]/60 font-mono text-xs">
+            <a class="text-[#F2E9E4] hover:text-[#C9ADA7] flex items-center gap-1.5 transition-colors" href="https://github.com/Chinonso-Peter/Flappy_Ball" rel="noopener noreferrer" target="_blank">
+              <span>Source on GitHub</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. Dungeon-Dash (Game Dev) -->
+        <div class="project-card bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-5 hover:border-[#C9ADA7]/40 transition-colors" data-category="game">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs px-2.5 py-0.5 rounded bg-[#4A4E69]/60 text-[#F2E9E4] border border-[#4A4E69] uppercase font-semibold">
+                3D RPG Game Dev
+              </span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">PROJ_06</span>
+            </div>
+
+            <!-- UI Preview: Isometric CAD Wireframe -->
+            <div class="w-full h-32 rounded bg-[#22223B] border border-[#4A4E69] p-3 flex flex-col justify-between font-mono text-[11px] relative overflow-hidden">
+              <div class="flex items-center justify-between text-[#9A8C98] border-b border-[#4A4E69]/60 pb-1.5">
+                <span>QUEST: KEY_QUEST_ENGINE</span>
+                <span class="text-[#C9ADA7]">STATE: EXPLORATION</span>
+              </div>
+              <svg class="w-full h-14" fill="none" viewBox="0 0 240 50">
+                <polygon fill="none" points="40,15 80,5 120,15 80,27" stroke="#C9ADA7" stroke-width="1.2"></polygon>
+                <polygon fill="#22223B" points="40,15 80,27 80,44 40,32" stroke="#4A4E69" stroke-width="1"></polygon>
+                <polygon fill="none" points="80,27 120,15 120,32 80,44" stroke="#4A4E69" stroke-width="1"></polygon>
+                <circle cx="80" cy="27" fill="#F2E9E4" r="2.5"></circle>
+                <line stroke="#9A8C98" stroke-dasharray="2 2" stroke-width="1" x1="80" x2="170" y1="27" y2="27"></line>
+                <rect fill="#22223B" height="18" stroke="#4A4E69" width="55" x="170" y="18"></rect>
+                <text fill="#C9ADA7" font-family="JetBrains Mono" font-size="7" text-anchor="middle" x="197" y="30">KEYS: 3/3</text>
+              </svg>
+              <div class="text-[#9A8C98] text-[10px] flex items-center justify-between pt-1 border-t border-[#4A4E69]/60">
+                <span>PHYSICS: CHARACTER_CONTROLLER</span>
+                <span class="text-[#C9ADA7]">DUNGEON // ACTIVE</span>
+              </div>
+            </div>
+
+            <h3 class="font-headline text-xl font-bold text-[#F2E9E4]">Dungeon-Dash – 3D RPG</h3>
+            <p class="font-body text-sm text-[#C9ADA7] leading-relaxed">
+              3D action RPG built around dungeon navigation and key quest progression. Implemented full character movement, obstacle state machines, interactable key-door puzzles, and cohesive level layouts.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Unity</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">C#</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">3D Mechanics</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Quest System</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-5 pt-3 border-t border-[#4A4E69]/60 font-mono text-xs">
+            <a class="text-[#F2E9E4] hover:text-[#C9ADA7] flex items-center gap-1.5 transition-colors" href="https://peters-g.itch.io/dungeon-dashkey-quest" rel="noopener noreferrer" target="_blank">
+              <span>Play on itch.io</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+              </svg>
+            </a>
+            <a class="text-[#9A8C98] hover:text-[#F2E9E4] flex items-center gap-1.5 transition-colors" href="https://github.com/Chinonso-Peter" rel="noopener noreferrer" target="_blank">
+              <span>GitHub</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 7. Jurassic Run (Game Dev) -->
+        <div class="project-card bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-5 hover:border-[#C9ADA7]/40 transition-colors" data-category="game">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs px-2.5 py-0.5 rounded bg-[#C9ADA7]/15 text-[#C9ADA7] border border-[#C9ADA7]/30 uppercase font-semibold">
+                2D Arcade Game Dev
+              </span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">PROJ_07</span>
+            </div>
+
+            <!-- UI Preview: 2D Arcade Telemetry -->
+            <div class="w-full h-32 rounded bg-[#22223B] border border-[#4A4E69] p-3 flex flex-col justify-between font-mono text-[11px]">
+              <div class="flex items-center justify-between text-[#9A8C98] border-b border-[#4A4E69]/60 pb-1.5">
+                <span>ENGINE: UNITY_2D_PHYSICS</span>
+                <span class="text-[#C9ADA7]">LOOP: RUNNER_PROC</span>
+              </div>
+              <div class="flex items-center justify-around py-1">
+                <div class="text-center">
+                  <span class="text-[9px] text-[#9A8C98] block">COLLECTIBLES</span>
+                  <span class="font-headline text-base font-bold text-[#F2E9E4]">DYNAMIC</span>
+                </div>
+                <div class="w-9 h-9 rounded-full border border-dashed border-[#C9ADA7] flex items-center justify-center">
+                  <svg class="w-4 h-4 text-[#C9ADA7]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M13 2L3 14h8l-2 8 10-12h-8l2-8z" />
+                  </svg>
+                </div>
+                <div class="text-center">
+                  <span class="text-[9px] text-[#9A8C98] block">OBSTACLES</span>
+                  <span class="font-mono text-xs text-[#F2E9E4]">ADAPTIVE</span>
+                </div>
+              </div>
+              <div class="text-[#9A8C98] text-[10px] flex items-center justify-between pt-1 border-t border-[#4A4E69]/60">
+                <span>AUDIO_FX: SYNCED</span>
+                <span class="text-[#C9ADA7]">STANDALONE // WEB</span>
+              </div>
+            </div>
+
+            <h3 class="font-headline text-xl font-bold text-[#F2E9E4]">Jurassic Run – 2D Runner</h3>
+            <p class="font-body text-sm text-[#C9ADA7] leading-relaxed">
+              Vibrant 2D endless runner engineered with smooth character controls, dynamic obstacle generation, custom collectible scoring systems, polished sprite animations, and audio effects.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Unity</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">C#</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">2D Physics</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Game Feel &amp; Audio</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-5 pt-3 border-t border-[#4A4E69]/60 font-mono text-xs">
+            <a class="text-[#F2E9E4] hover:text-[#C9ADA7] flex items-center gap-1.5 transition-colors" href="https://peters-g.itch.io/jurassic-run" rel="noopener noreferrer" target="_blank">
+              <span>Play on itch.io</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+              </svg>
+            </a>
+            <a class="text-[#9A8C98] hover:text-[#F2E9E4] flex items-center gap-1.5 transition-colors" href="https://github.com/Chinonso-Peter" rel="noopener noreferrer" target="_blank">
+              <span>GitHub</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 8. LocalInspect AI (Software & AI) -->
+        <div class="project-card bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-5 hover:border-[#C9ADA7]/40 transition-colors" data-category="soft">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs px-2.5 py-0.5 rounded bg-[#4A4E69]/60 text-[#F2E9E4] border border-[#4A4E69] uppercase font-semibold">
+                Software &amp; AI
+              </span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">PROJ_08</span>
+            </div>
+
+            <!-- UI Preview: Blueprint 3D CAD Wireframe -->
+            <div class="w-full h-32 rounded bg-[#22223B] border border-[#4A4E69] p-3 flex flex-col justify-between font-mono text-[11px] relative overflow-hidden">
+              <div class="flex items-center justify-between text-[#9A8C98] border-b border-[#4A4E69]/60 pb-1.5">
+                <span>INFERENCE: AIR_GAPPED_LOCAL</span>
+                <span class="text-[#C9ADA7]">THREE.JS_3D</span>
+              </div>
+              <svg class="w-full h-14" fill="none" viewBox="0 0 240 50">
+                <polygon fill="none" points="50,15 90,5 130,15 90,27" stroke="#C9ADA7" stroke-width="1.2"></polygon>
+                <polygon fill="#22223B" points="50,15 90,27 90,44 50,32" stroke="#4A4E69" stroke-width="1"></polygon>
+                <polygon fill="none" points="90,27 130,15 130,32 90,44" stroke="#4A4E69" stroke-width="1"></polygon>
+                <circle cx="90" cy="27" fill="#F2E9E4" r="2.5"></circle>
+                <line stroke="#9A8C98" stroke-dasharray="2 2" stroke-width="1" x1="90" x2="180" y1="27" y2="27"></line>
+                <rect fill="#22223B" height="18" stroke="#4A4E69" width="45" x="180" y="18"></rect>
+                <text fill="#C9ADA7" font-family="JetBrains Mono" font-size="7" text-anchor="middle" x="202" y="30">TOL: 0.08</text>
+              </svg>
+              <div class="text-[#9A8C98] text-[10px] flex items-center justify-between pt-1 border-t border-[#4A4E69]/60">
+                <span>BLUEPRINT: STRUCTURAL_CAD</span>
+                <span class="text-[#C9ADA7]">NO CLOUD EGRESS</span>
+              </div>
+            </div>
+
+            <h3 class="font-headline text-xl font-bold text-[#F2E9E4]">LocalInspect AI</h3>
+            <p class="font-body text-sm text-[#C9ADA7] leading-relaxed">
+              Offline-first desktop application for analyzing architectural blueprints and generating interactive 3D structural models locally without cloud egress.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Local AI</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Three.js</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Desktop App</span>
+              <span class="px-2 py-0.5 rounded font-mono text-xs bg-[#22223B] border border-[#4A4E69] text-[#F2E9E4]">Python</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-5 pt-3 border-t border-[#4A4E69]/60 font-mono text-xs">
+            <a class="text-[#F2E9E4] hover:text-[#C9ADA7] flex items-center gap-1.5 transition-colors" href="https://github.com/Chinonso-Peter/local-inspect-ai" rel="noopener noreferrer" target="_blank">
+              <span>Source on GitHub</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COMPACT SUB-BLOCK: Security Labs & CTF Research -->
+      <div class="mt-10 bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col lg:flex-row lg:items-center justify-between gap-6 hover:border-[#C9ADA7]/40 transition-colors">
+        <!-- PortSwigger Web Security Labs -->
+        <div class="flex flex-col gap-2.5 max-w-xl">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#C9ADA7]"></span>
+            <span class="font-mono text-xs uppercase tracking-wider text-[#C9ADA7] font-semibold">PortSwigger Labs &amp; Vulnerability Research</span>
+          </div>
+          <p class="font-body text-xs text-[#C9ADA7] leading-relaxed">
+            Hands-on practitioner exploit walkthroughs and lab research covering <span class="text-[#F2E9E4]">SQL Injection</span>, <span class="text-[#F2E9E4]">Broken Access Control / IDOR</span>, <span class="text-[#F2E9E4]">Stored &amp; Reflected XSS</span>, and <span class="text-[#F2E9E4]">Authentication 2FA Bypass</span>.
+          </p>
+          <div>
+            <a class="inline-flex items-center gap-1.5 font-mono text-xs text-[#C9ADA7] hover:text-[#F2E9E4] transition-colors" href="https://medium.com/@chinonsopeter456" rel="noopener noreferrer" target="_blank">
+              <span>Read Write-Ups on Medium (@chinonsopeter456)</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden lg:block w-px h-16 bg-[#4A4E69]"></div>
+
+        <!-- picoCTF & Cyber_World Challenges -->
+        <div class="flex flex-col gap-2.5 max-w-md">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#F2E9E4]"></span>
+            <span class="font-mono text-xs uppercase tracking-wider text-[#F2E9E4] font-semibold">Cyber_World // Exploit Scripts &amp; Labs</span>
+          </div>
+          <p class="font-body text-xs text-[#C9ADA7] leading-relaxed">
+            Personal offensive security repository containing custom Python automation, exploit tools, and CTF solvers across <span class="text-[#F2E9E4]">Web Exploitation</span>, <span class="text-[#F2E9E4]">Cryptography</span>, and <span class="text-[#F2E9E4]">Forensics</span>.
+          </p>
+          <div>
+            <a class="inline-flex items-center gap-1.5 font-mono text-xs text-[#F2E9E4] hover:text-[#C9ADA7] transition-colors" href="https://github.com/Chinonso-Peter/Cyber_World" rel="noopener noreferrer" target="_blank">
+              <span>Cyber_World Scripts on GitHub</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CERTIFICATES (#certificates) -->
+    <section class="w-full max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20 border-b border-[#4A4E69]/60" id="certificates">
+      <div class="flex flex-col gap-2 mb-10">
+        <span class="font-mono text-xs text-[#9A8C98] uppercase tracking-widest">// 04. VERIFIED CREDENTIALS</span>
+        <h2 class="font-headline text-2xl md:text-3xl font-bold text-[#F2E9E4]">Certifications &amp; Accreditations</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- 1. Degree -->
+        <div class="bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-5 hover:border-[#C9ADA7]/40 transition-colors">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-[#4A4E69] mb-4">
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-[#C9ADA7]/15 text-[#C9ADA7] border border-[#C9ADA7]/30 uppercase font-semibold">
+                DEGREE
+              </span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">GRADUATED</span>
+            </div>
+            <h3 class="font-headline text-lg font-bold text-[#F2E9E4] mb-1">BSc. Computer Science</h3>
+            <p class="font-body text-xs text-[#C9ADA7]">University of Nigeria, Nsukka (UNN)</p>
+          </div>
+          <div class="pt-3 border-t border-[#4A4E69]/60 flex items-center justify-between font-mono text-xs">
+            <span class="text-[10px] text-[#9A8C98]">STATUS: CONFIRMED</span>
+            <span class="text-[10px] text-[#C9ADA7] flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#C9ADA7]"></span>
+              ACTIVE RECORD
+            </span>
+          </div>
+        </div>
+
+        <!-- 2. GameUp Africa -->
+        <div class="bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-5 hover:border-[#C9ADA7]/40 transition-colors">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-[#4A4E69] mb-4">
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-[#C9ADA7]/15 text-[#C9ADA7] border border-[#C9ADA7]/30 uppercase font-semibold">
+                ACCREDITED
+              </span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">2026</span>
+            </div>
+            <h3 class="font-headline text-lg font-bold text-[#F2E9E4] mb-1">GameUp Africa: Unity Game Development</h3>
+            <p class="font-body text-xs text-[#C9ADA7]">Endless Games &amp; Learning Lab | Arizona State University</p>
+          </div>
+          <div class="pt-3 border-t border-[#4A4E69]/60 flex items-center justify-between font-mono text-xs">
+            <span class="text-[10px] text-[#9A8C98]">STATUS: CONFIRMED</span>
+            <button type="button" onclick="openDocViewer('GameUp Africa: Unity Game Development', 'Endless Games & Learning Lab | ASU', '2026', 'assets/certificates/CredID.pdf')" class="text-[#F2E9E4] hover:text-[#C9ADA7] flex items-center gap-1.5 transition-colors cursor-pointer">
+              <svg class="w-3.5 h-3.5 text-[#C9ADA7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+              <span>View Document</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Ethical Hacker -->
+        <div class="bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-5 hover:border-[#C9ADA7]/40 transition-colors">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-[#4A4E69] mb-4">
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-[#C9ADA7]/15 text-[#C9ADA7] border border-[#C9ADA7]/30 uppercase font-semibold">
+                ACCREDITED
+              </span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">2025</span>
+            </div>
+            <h3 class="font-headline text-lg font-bold text-[#F2E9E4] mb-1">Ethical Hacker Course</h3>
+            <p class="font-body text-xs text-[#C9ADA7]">Cisco Networking Academy</p>
+          </div>
+          <div class="pt-3 border-t border-[#4A4E69]/60 flex items-center justify-between font-mono text-xs">
+            <span class="text-[10px] text-[#9A8C98]">STATUS: CONFIRMED</span>
+            <button type="button" onclick="openDocViewer('Ethical Hacker Course', 'Cisco Networking Academy', '2025', 'assets/certificates/Ethical_Hacker_certificate_chinonsopeter456-gmail-com_5daead69-a6f6-44f6-92fe-4c6afc26666f.pdf')" class="text-[#F2E9E4] hover:text-[#C9ADA7] flex items-center gap-1.5 transition-colors cursor-pointer">
+              <svg class="w-3.5 h-3.5 text-[#C9ADA7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+              <span>View Document</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Intro to Cybersecurity -->
+        <div class="bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-5 hover:border-[#C9ADA7]/40 transition-colors">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-[#4A4E69] mb-4">
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-[#C9ADA7]/15 text-[#C9ADA7] border border-[#C9ADA7]/30 uppercase font-semibold">
+                ACCREDITED
+              </span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">2025</span>
+            </div>
+            <h3 class="font-headline text-lg font-bold text-[#F2E9E4] mb-1">Introduction to Cybersecurity</h3>
+            <p class="font-body text-xs text-[#C9ADA7]">Cisco Networking Academy</p>
+          </div>
+          <div class="pt-3 border-t border-[#4A4E69]/60 flex items-center justify-between font-mono text-xs">
+            <span class="text-[10px] text-[#9A8C98]">STATUS: CONFIRMED</span>
+            <button type="button" onclick="openDocViewer('Introduction to Cybersecurity', 'Cisco Networking Academy', '2025', 'assets/certificates/Introduction_to_Cybersecurity_certificate_chinonsopeter456-gmail-com_f93ce141-6772-4754-afe5-42237def3247.pdf')" class="text-[#F2E9E4] hover:text-[#C9ADA7] flex items-center gap-1.5 transition-colors cursor-pointer">
+              <svg class="w-3.5 h-3.5 text-[#C9ADA7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+              <span>View Document</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. NVIDIA Deep Learning -->
+        <div class="bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-5 hover:border-[#C9ADA7]/40 transition-colors">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-[#4A4E69] mb-4">
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-[#C9ADA7]/15 text-[#C9ADA7] border border-[#C9ADA7]/30 uppercase font-semibold">
+                ACCREDITED
+              </span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">2026</span>
+            </div>
+            <h3 class="font-headline text-lg font-bold text-[#F2E9E4] mb-1">Fundamentals of Deep Learning</h3>
+            <p class="font-body text-xs text-[#C9ADA7]">NVIDIA</p>
+          </div>
+          <div class="pt-3 border-t border-[#4A4E69]/60 flex items-center justify-between font-mono text-xs">
+            <span class="text-[10px] text-[#9A8C98]">STATUS: CONFIRMED</span>
+            <button type="button" onclick="openDocViewer('Fundamentals of Deep Learning', 'NVIDIA', '2026', 'assets/certificates/My Learning _ NVIDIA.pdf')" class="text-[#F2E9E4] hover:text-[#C9ADA7] flex items-center gap-1.5 transition-colors cursor-pointer">
+              <svg class="w-3.5 h-3.5 text-[#C9ADA7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+              <span>View Document</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 6. TryHackMe Advent of Cyber -->
+        <div class="bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-5 hover:border-[#C9ADA7]/40 transition-colors">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-[#4A4E69] mb-4">
+              <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-[#C9ADA7]/15 text-[#C9ADA7] border border-[#C9ADA7]/30 uppercase font-semibold">
+                ACCREDITED
+              </span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">2025</span>
+            </div>
+            <h3 class="font-headline text-lg font-bold text-[#F2E9E4] mb-1">THM Advent of Cyber</h3>
+            <p class="font-body text-xs text-[#C9ADA7]">TryHackMe</p>
+          </div>
+          <div class="pt-3 border-t border-[#4A4E69]/60 flex items-center justify-between font-mono text-xs">
+            <span class="text-[10px] text-[#9A8C98]">STATUS: CONFIRMED</span>
+            <button type="button" onclick="openDocViewer('THM Advent of Cyber', 'TryHackMe', '2025', 'assets/certificates/THM-3TEHSAR5AC(AoC).pdf')" class="text-[#F2E9E4] hover:text-[#C9ADA7] flex items-center gap-1.5 transition-colors cursor-pointer">
+              <svg class="w-3.5 h-3.5 text-[#C9ADA7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+              <span>View Document</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: EXPERIENCE & EDUCATION (#experience) -->
+    <section class="w-full max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20 border-b border-[#4A4E69]/60" id="experience">
+      <div class="flex flex-col gap-2 mb-10">
+        <span class="font-mono text-xs text-[#9A8C98] uppercase tracking-widest">// 05. TRAJECTORY</span>
+        <h2 class="font-headline text-2xl md:text-3xl font-bold text-[#F2E9E4]">Experience &amp; Background</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Experience Card -->
+        <div class="bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-4">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-[#4A4E69] mb-4">
+              <span class="font-mono text-xs text-[#C9ADA7] font-semibold uppercase tracking-wider">Co-Founder &amp; Developer</span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">Cavern Studios • Nigeria</span>
+            </div>
+            <h3 class="font-headline text-lg font-bold text-[#F2E9E4] mb-2">Mobile Game Systems Engineering</h3>
+            <p class="font-body text-sm text-[#C9ADA7] leading-relaxed">
+              Spearheaded gameplay mechanics, architecture, and deployment for mobile titles. Handled 3D asset optimization, low-end device profiling, audio-visual feedback loops, and integration of monetization mechanisms.
+            </p>
+          </div>
+          <div class="font-mono text-[11px] text-[#9A8C98] pt-3 border-t border-[#4A4E69]/60 flex items-center justify-between">
+            <span>ROLE // SYSTEMS &amp; OPTIMIZATION</span>
+            <span class="text-[#F2E9E4]">UNITY / C#</span>
+          </div>
+        </div>
+
+        <!-- Learning & Cybersecurity Card -->
+        <div class="bg-[#4A4E69]/20 rounded-lg p-6 border border-[#4A4E69] flex flex-col justify-between gap-4">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-[#4A4E69] mb-4">
+              <span class="font-mono text-xs text-[#F2E9E4] font-semibold uppercase tracking-wider">Independent Engineering &amp; Security</span>
+              <span class="font-mono text-[11px] text-[#9A8C98]">Self-Directed</span>
+            </div>
+            <h3 class="font-headline text-lg font-bold text-[#F2E9E4] mb-2">Web Security &amp; Full-Stack Engineering</h3>
+            <p class="font-body text-sm text-[#C9ADA7] leading-relaxed">
+              Continuously developing scalable web tools using Next.js and React alongside comprehensive penetration testing practice. Pursuing mastery across web security vulnerabilities, bug bounty hunting, and defensive application architecture.
+            </p>
+          </div>
+          <div class="font-mono text-[11px] text-[#9A8C98] pt-3 border-t border-[#4A4E69]/60 flex items-center justify-between">
+            <span>FOCUS // APPSEC &amp; FULL-STACK</span>
+            <span class="text-[#C9ADA7]">CONTINUOUS TRAINING</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: CONTACT (#contact) -->
+    <section class="w-full max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24" id="contact">
+      <div class="bg-[#4A4E69]/20 rounded-lg p-8 md:p-12 border border-[#4A4E69] shadow-2xl relative overflow-hidden">
+        
+        <!-- Subtle Top Accents -->
+        <div class="absolute top-0 left-0 w-24 h-[2px] bg-[#F2E9E4]"></div>
+        <div class="absolute top-0 right-0 w-24 h-[2px] bg-[#C9ADA7]"></div>
+
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <span class="font-mono text-xs text-[#9A8C98] uppercase tracking-widest">// SECURE CONTACT TERMINAL</span>
+          <h2 class="font-headline text-3xl md:text-4xl font-bold text-[#F2E9E4] tracking-tight">
+            Let’s build—or secure—something great.
+          </h2>
+          <p class="font-body text-base text-[#C9ADA7] leading-relaxed">
+            Open to software engineering, Unity game development, and junior cybersecurity / VAPT roles, contracts, or freelance collaborations.
+          </p>
+        </div>
+
+        <!-- Action Row -->
+        <div class="flex flex-wrap items-center gap-4 pt-8">
+          
+          <!-- One-click Copy Email Button -->
+          <button class="relative inline-flex items-center gap-2 px-5 py-2.5 bg-[#F2E9E4] text-[#22223B] font-mono text-xs font-semibold uppercase tracking-wider rounded hover:bg-[#C9ADA7] transition-colors" id="copy-email-btn" onclick="copyEmail()" type="button">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            <span id="copy-btn-label">Copy Email</span>
+            <!-- Tooltip Toast -->
+            <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-[#22223B] text-[#F2E9E4] border border-[#4A4E69] text-[10px] font-mono px-2 py-0.5 rounded opacity-0 pointer-events-none transition-opacity" id="copy-toast">
+              COPIED!
+            </span>
+          </button>
+
+          <!-- Direct Send Email Link -->
+          <a class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#4A4E69]/40 border border-[#4A4E69] hover:border-[#C9ADA7] text-[#F2E9E4] font-mono text-xs font-medium uppercase tracking-wider rounded hover:bg-[#4A4E69] transition-colors" href="mailto:chinonsopeter456@gmail.com">
+            <svg class="w-4 h-4 text-[#9A8C98]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span>Send Email</span>
+          </a>
+
+          <!-- Monospaced Email String Indicator -->
+          <span class="font-mono text-xs text-[#9A8C98] hidden sm:inline">
+            chinonsopeter456@gmail.com
+          </span>
+        </div>
+
+        <!-- Clean Social Links Row -->
+        <div class="flex flex-wrap items-center gap-6 pt-10 mt-8 border-t border-[#4A4E69]/60 font-mono text-xs text-[#9A8C98]">
+          <a class="hover:text-[#F2E9E4] flex items-center gap-1.5 transition-colors" href="https://github.com/Chinonso-Peter" rel="noopener noreferrer" target="_blank">
+            <span>GitHub</span>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+            </svg>
+          </a>
+          <a class="hover:text-[#C9ADA7] flex items-center gap-1.5 transition-colors" href="https://www.linkedin.com/in/chinonso-peter-a02212299/" rel="noopener noreferrer" target="_blank">
+            <span>LinkedIn</span>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+            </svg>
+          </a>
+          <a class="hover:text-[#C9ADA7] flex items-center gap-1.5 transition-colors" href="https://medium.com/@chinonsopeter456" rel="noopener noreferrer" target="_blank">
+            <span>Medium</span>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+            </svg>
+          </a>
+          <a class="hover:text-[#F2E9E4] flex items-center gap-1.5 transition-colors" href="https://x.com/m0n4rch0_0" rel="noopener noreferrer" target="_blank">
+            <span>X (Twitter)</span>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+            </svg>
+          </a>
+          <a class="hover:text-[#F2E9E4] flex items-center gap-1.5 transition-colors" href="https://vecna-games.itch.io" rel="noopener noreferrer" target="_blank">
+            <span>itch.io</span>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H7m10 0v10" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MINIMAL BOTTOM FOOTER -->
+  <footer class="w-full border-t border-[#4A4E69]/60 bg-[#22223B] py-8">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-[#9A8C98]">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[#C9ADA7]"></span>
+        <span class="text-[#F2E9E4]">// SYS_STATUS: OPERATIONAL</span>
+        <span class="text-[#9A8C98]">•</span>
+        <span class="text-[#9A8C98]">LAGOS, NIGERIA</span>
+      </div>
+      <div class="text-[#9A8C98] text-[11px] flex items-center gap-2">
+        <span>© 2026 Ezea Chinonso Peter • SW_ARCH &amp; OFFENSIVE_SEC</span>
+      </div>
     </div>
-
-    <div class="project">
-      <h3>
-        Breached – Web Application
-        <a href="https://breached-ten.vercel.app" target="_blank">(View)</a>
-      </h3>
-      <ul>
-        <li>Designed a system that checks breached databases for compromised credentials</li>
-        <li>Implemented secure front-end to back-end data flow</li>
-      </ul>
-      <p class="tech">Tech: Next.js</p>
-    </div>
-
-    <div class="project">
-      <h3>
-        Dungeon-Dash – 3D RPG
-        <a href="https://peters-g.itch.io/dungeon-dashkey-quest" target="_blank">(View)</a>
-      </h3>
-      <ul>
-        <li>Designed and implemented levels using free 3D assets</li>
-        <li>Built RPG mechanics including character movement and quest systems</li>
-      </ul>
-      <p class="tech">Tech: Unity, C#</p>
-    </div>
-
-    <div class="project">
-      <h3>
-        Jurassic Run – 2D Endless Runner
-        <a href="https://peters-g.itch.io/jurassic-run" target="_blank">(View)</a>
-      </h3>
-      <ul>
-        <li>Developed smooth 2D endless runner gameplay</li>
-        <li>Implemented dynamic obstacles and collectible system for player engagement</li>
-        <li>Added visually appealing animations and sound effects to enhance game feel</li>
-      </ul>
-      <p class="tech">Tech: Unity, C#</p>
-    </div>
-
-  </section>
-
-  <section>
-    <h2>Experience</h2>
-    <p>
-      <strong>Co-Founder & Developer – Vecna Games (Nigeria)</strong><br />
-      Developed mobile games from concept to release with a focus on engineering,
-      optimization, and scalability.
-    </p>
-  </section>
-
-  <section>
-    <h2>Education & Learning</h2>
-    <p>
-      Self-Taught Software Developer<br />
-      Ongoing Cybersecurity and Ethical Hacking Training
-    </p>
-  </section>
-
-  <section>
-    <h2>Interests</h2>
-    <p>
-      Game mechanics, ethical hacking, low-level systems, bug bounties
-    </p>
-  </section>
-
-  <footer>
-    <p>© 2026 Ezea Chinonso Peter</p>
   </footer>
+
+  <!-- DOCUMENT VIEWER MODAL CONTAINER -->
+  <div id="doc-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-[#22223B]/85 backdrop-blur-md" onclick="closeDocViewer()">
+    <div class="relative w-full max-w-5xl h-[85vh] bg-[#2A2A44] border border-[#4A4E69] rounded-xl shadow-2xl flex flex-col overflow-hidden" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between px-6 py-4 bg-[#22223B] border-b border-[#4A4E69]">
+        <div class="flex items-center gap-3">
+          <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-[#C9ADA7]/20 text-[#C9ADA7] border border-[#C9ADA7]/30 uppercase font-semibold">
+            DOCUMENT VIEWER
+          </span>
+          <div>
+            <h3 id="modal-title" class="font-headline text-base font-bold text-[#F2E9E4] leading-tight"></h3>
+            <p id="modal-subtitle" class="font-body text-xs text-[#9A8C98]"></p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <a id="modal-tab-btn" href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded bg-[#4A4E69]/40 hover:bg-[#4A4E69] border border-[#4A4E69] hover:border-[#C9ADA7] text-xs font-mono text-[#F2E9E4] transition-colors flex items-center gap-1.5">
+            <span>Open Fullscreen</span>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          <button type="button" onclick="closeDocViewer()" class="p-1.5 rounded bg-[#4A4E69]/40 hover:bg-red-900/40 border border-[#4A4E69] hover:border-red-500/50 text-[#C9ADA7] hover:text-red-300 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="relative flex-1 w-full bg-[#1b1b2f] flex items-center justify-center overflow-auto p-2">
+        <iframe id="modal-iframe" src="" class="w-full h-full rounded border-0"></iframe>
+      </div>
+      <div class="px-6 py-2.5 bg-[#22223B] border-t border-[#4A4E69] flex items-center justify-between font-mono text-[11px] text-[#9A8C98]">
+        <span>AUTHENTICATED ACCREDITATION RECORD</span>
+        <span class="text-[#C9ADA7]">PRESS ESC TO CLOSE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLIENT-SIDE SCRIPTS -->
+  <script>
+    // Project Category Filtering
+    function filterProjects(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('bg-[#4A4E69]', 'border', 'border-[#C9ADA7]/40', 'text-[#F2E9E4]');
+        b.classList.add('text-[#9A8C98]');
+      });
+      btn.classList.add('bg-[#4A4E69]', 'border', 'border-[#C9ADA7]/40', 'text-[#F2E9E4]');
+      btn.classList.remove('text-[#9A8C98]');
+
+      document.querySelectorAll('.project-card').forEach(card => {
+        const itemCat = card.getAttribute('data-category') || '';
+        const categories = itemCat.split(' ');
+        if (cat === 'all' || categories.includes(cat)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // One-Click Email Copy to Clipboard
+    function copyEmail() {
+      const email = 'chinonsopeter456@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const toast = document.getElementById('copy-toast');
+        const label = document.getElementById('copy-btn-label');
+        if (toast && label) {
+          toast.classList.remove('opacity-0');
+          toast.classList.add('opacity-100');
+          label.innerText = 'COPIED!';
+          setTimeout(() => {
+            toast.classList.remove('opacity-100');
+            toast.classList.add('opacity-0');
+            label.innerText = 'Copy Email';
+          }, 2000);
+        }
+      }).catch(err => {
+        console.error('Clipboard copy error:', err);
+      });
+    }
+
+    // Responsive Mobile Menu
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu) {
+        menu.classList.toggle('hidden');
+      }
+    }
+
+    // In-Browser Document Viewer Modal
+    function openDocViewer(title, issuer, date, url) {
+      const modal = document.getElementById('doc-modal');
+      const modalTitle = document.getElementById('modal-title');
+      const modalSubtitle = document.getElementById('modal-subtitle');
+      const modalTabBtn = document.getElementById('modal-tab-btn');
+      const modalIframe = document.getElementById('modal-iframe');
+
+      if (modal && modalTitle && modalSubtitle && modalTabBtn && modalIframe) {
+        const cleanUrl = encodeURI(url);
+        modalTitle.textContent = title;
+        modalSubtitle.textContent = `${issuer} • ${date}`;
+        modalTabBtn.href = cleanUrl;
+        modalIframe.src = cleanUrl + '#toolbar=1&navpanes=0';
+        modal.classList.remove('hidden');
+      }
+    }
+
+    function closeDocViewer() {
+      const modal = document.getElementById('doc-modal');
+      const modalIframe = document.getElementById('modal-iframe');
+      if (modal && modalIframe) {
+        modal.classList.add('hidden');
+        modalIframe.src = '';
+      }
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeDocViewer();
+      }
+    });
+  </script>
 
 </body>
 </html>
